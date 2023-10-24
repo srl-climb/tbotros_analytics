@@ -3,7 +3,7 @@ from custom_msgs.msg import Float64Stamped, Int16Stamped, Float64Array, BoolArra
 from geometry_msgs.msg import PoseStamped
 from std_msgs.msg import String, Bool, Int8
 from builtin_interfaces.msg import Time
-from mocap_msgs.msg import RigidBodies, Markers, RigidBody, Marker
+from mocap_msgs.msg import RigidBodies, Markers
 from tbotlib import TransformMatrix
 
 
@@ -48,7 +48,6 @@ class Float64StampedMsgWriter(MsgWriter):
         self.msgdict['data']  = msg.data
 
         return super().writemsg(timestamp)
-
 
 
 class Int16StampedMsgWriter(MsgWriter):

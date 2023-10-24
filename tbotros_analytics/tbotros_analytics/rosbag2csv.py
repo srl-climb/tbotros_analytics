@@ -9,6 +9,7 @@ from ament_index_python.packages import get_package_share_directory
 from launch.logging import get_logger
 from .writer import *
 
+
 LOGGER = get_logger('rosbag2csv')
 
 
@@ -70,6 +71,7 @@ def rosbag2csv(directory: str):
                     writer.writemsg(timestamp, data)
 
         LOGGER.info('Closed database {}'.format(os.path.basename(directory)))
+
 
 def main():
 
